@@ -1,7 +1,8 @@
 // Represents the standard unit
 public enum Unit {
   KILOGRAM(1000),
-  GRAM(1);
+  GRAM(1), // Central Unit
+  MILLIGRAM(0.001);
 
   private final double factor;
 

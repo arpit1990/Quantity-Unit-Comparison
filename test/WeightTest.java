@@ -47,4 +47,13 @@ class WeightTest {
 
     assertEquals(true, thousandGram.equals(zeroByTenKg));
   }
+
+  @Test
+  public void expectsTrueWhenTwoGramsEqualsOneByThousandMilligram() {
+    Weight twoGram = new Weight(2, Unit.GRAM);
+
+    Weight oneByThousandMilligram = new Weight(2000, Unit.MILLIGRAM);
+
+    assertEquals(true, twoGram.equals(oneByThousandMilligram));
+  }
 }
