@@ -1,7 +1,5 @@
-package Length;
+package QuantityComparison.Length;
 
-import QuantityComparison.Length.Length;
-import QuantityComparison.Length.LengthUnit;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

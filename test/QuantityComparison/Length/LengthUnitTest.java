@@ -1,4 +1,4 @@
-package Length;
+package QuantityComparison.Length;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +8,6 @@ public class LengthUnitTest {
 
   @Test
   void expectOneWhenFactorMeter() {
-    assertEquals(1, QuantityComparison.Length.LengthUnit.METER.factor());
+    assertEquals(1, LengthUnit.METER.factor());
   }
 }
