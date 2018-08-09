@@ -1,11 +1,13 @@
+package Weight;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UnitTest {
+class WeightUnitTest {
 
   @Test
   void expectOneWhenFactorGram() {
-    assertEquals(1, Unit.GRAM.factor());
+    assertEquals(1, WeightUnit.GRAM.factor());
   }
 }

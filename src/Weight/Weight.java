@@ -1,12 +1,14 @@
+package Weight;
+
 import java.util.Objects;
 
 // Represents the mass of an Object
 public class Weight {
 
   private final double value;
-  private final Unit unit;
+  private final WeightUnit unit;
 
-  public Weight(double value, Unit unit) {
+  public Weight(double value, WeightUnit unit) {
     this.value = value;
     this.unit = unit;
   }
@@ -17,8 +19,8 @@ public class Weight {
     if (o == null || getClass() != o.getClass()) return false;
     Weight weight = (Weight) o;
 
-    Unit thisUnit = this.unit;
-    Unit otherUnit = ((Weight) o).unit;
+    WeightUnit thisUnit = this.unit;
+    WeightUnit otherUnit = ((Weight) o).unit;
 
     if(thisUnit.equals(otherUnit)) {
       return Double.compare(weight.value, value) == 0 && Objects.equals(unit, weight.unit);
