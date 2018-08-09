@@ -1,6 +1,8 @@
-package Weight;
+package QuantityComparison.Weight;
 
-public enum WeightUnit {
+import QuantityComparison.Unit;
+
+public enum WeightUnit implements Unit {
   KILOGRAM(1000),
   GRAM(1), // Central Unit
   MILLIGRAM(0.001);
@@ -11,6 +13,7 @@ public enum WeightUnit {
     this.factor = factor;
   }
 
+  @Override
   public double factor() {
     return this.factor;
   }

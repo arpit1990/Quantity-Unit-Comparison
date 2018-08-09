@@ -1,4 +1,4 @@
-package Weight;
+package QuantityComparison.Weight;
 
 import java.util.Objects;
 
@@ -23,15 +23,12 @@ public class Weight {
     WeightUnit otherUnit = ((Weight) o).unit;
 
     if(thisUnit.equals(otherUnit)) {
-      return Double.compare(other.value, value) == 0 && Objects.equals(unit, other.unit);
+      return Double.compare(other.value, value) == 0;
     } else {
       double thisWeightInGrams = thisUnit.toGram(this.value);
       double otherWeightInGrams = otherUnit.toGram(other.value);
 
-      if(thisWeightInGrams == otherWeightInGrams) {
-        return true;
-      }
-      return false;
+      return thisWeightInGrams == otherWeightInGrams;
     }
   }
 

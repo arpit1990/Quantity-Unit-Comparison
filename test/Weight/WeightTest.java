@@ -1,5 +1,7 @@
 package Weight;
 
+import QuantityComparison.Weight.Weight;
+import QuantityComparison.Weight.WeightUnit;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
