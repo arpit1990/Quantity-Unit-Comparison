@@ -14,4 +14,8 @@ public enum WeightUnit {
   public double factor() {
     return this.factor;
   }
+
+  public double toGram(double value) {
+    return value * this.factor;
+  }
 }

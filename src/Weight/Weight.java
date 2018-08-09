@@ -17,16 +17,16 @@ public class Weight {
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    Weight weight = (Weight) o;
+    Weight other = (Weight) o;
 
     WeightUnit thisUnit = this.unit;
     WeightUnit otherUnit = ((Weight) o).unit;
 
     if(thisUnit.equals(otherUnit)) {
-      return Double.compare(weight.value, value) == 0 && Objects.equals(unit, weight.unit);
+      return Double.compare(other.value, value) == 0 && Objects.equals(unit, other.unit);
     } else {
-      double thisWeightInGrams = this.value * thisUnit.factor();
-      double otherWeightInGrams = ((Weight) o).value * otherUnit.factor();
+      double thisWeightInGrams = thisUnit.toGram(this.value);
+      double otherWeightInGrams = otherUnit.toGram(other.value);
 
       if(thisWeightInGrams == otherWeightInGrams) {
         return true;
