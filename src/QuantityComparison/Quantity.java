@@ -5,8 +5,10 @@ import java.util.Objects;
 // Represents amount/number of material
 public class Quantity {
 
-  private final double value;
-  private final Unit unit;
+  private double value;
+  private Unit unit;
+
+  public Quantity() {}
 
   public Quantity(double value, Unit unit) {
     this.value = value;
@@ -17,8 +19,19 @@ public class Quantity {
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    Quantity quantity = (Quantity) o;
-    return Double.compare(quantity.value, value) == 0 && Objects.equals(unit, quantity.unit);
+    Quantity other = (Quantity) o;
+
+    Unit thisUnit = this.unit;
+    Unit otherUnit = other.unit;
+
+    if(thisUnit.getClass().getSimpleName().equals(otherUnit.getClass().getSimpleName())) {
+      double thisValue = thisUnit.factor();
+      double otherValue = otherUnit.factor();
+
+      return (thisValue * this.value) == (otherValue * other.value);
+    } else {
+      throw new IllegalStateException("Incompatible Units.");
+    }
   }
 
   @Override

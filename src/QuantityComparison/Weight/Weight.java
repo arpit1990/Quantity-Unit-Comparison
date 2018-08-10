@@ -1,5 +1,7 @@
 package QuantityComparison.Weight;
 
+import QuantityComparison.Quantity;
+
 import java.util.Objects;
 
 // Represents the mass of an Object

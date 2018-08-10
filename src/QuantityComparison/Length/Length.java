@@ -1,5 +1,7 @@
 package QuantityComparison.Length;
 
+import QuantityComparison.Quantity;
+
 import java.util.Objects;
 
 // Represents the measurement of unit
